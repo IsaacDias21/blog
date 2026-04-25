@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26/04/2026 às 01:16
+-- Tempo de geração: 26/04/2026 às 01:54
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -49,8 +49,7 @@ INSERT INTO `categorias` (`id`, `slug`, `titulo`, `texto`, `visitas`, `status`, 
 (3, 'seguranca', 'Segurança', 'Tudo sobre Segurança você encontra aqui...', 0, 1, '2026-04-03 18:35:05', NULL, NULL),
 (4, 'mysql', 'MySQL', 'Tudo sobre MYSQL você encontra aqui...', 0, 1, '2026-04-05 18:35:07', NULL, NULL),
 (5, 'teste', 'teste', 'teste', 1, 0, '2026-04-08 18:35:11', NULL, '2026-04-25 19:49:22'),
-(6, 'futebol', 'Futebol', 'Futebol', 0, 1, '2026-04-25 19:22:52', NULL, NULL),
-(7, NULL, '', NULL, 1, 1, NULL, NULL, '2026-04-25 19:41:38');
+(6, 'futebol', 'Futebol', 'Futebol', 0, 1, '2026-04-25 19:22:52', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -110,7 +109,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `level`, `nome`, `email`, `senha`, `status`, `ultimo_login`, `cadastrado_em`, `atualizado_em`, `ultimo_logout`) VALUES
-(1, 'Admin', 'Isaac Caraça', 'isaaccaracayahoo@gmail.com', '$2y$10$8NzSlXUUIZ8iVpfx6Zb5ue9f9TWmFtt2FgYT3nsxe/YMIm4jI4dnC', 1, '2026-04-25 19:22:26', '2025-05-19 19:44:38', '2026-04-25 19:00:09', '2026-04-25 19:23:03'),
+(1, 'Admin', 'Isaac Caraça', 'isaaccaracayahoo@gmail.com', '$2y$10$AyvSfwX7UsW3AaZCSzaJdu8Xa0lnTCMvkHi7fh2rHAus8oquWAFmS', 1, '2026-04-25 20:49:43', '2025-05-19 19:44:38', '2026-04-25 20:48:19', '2026-04-25 20:49:21'),
 (2, 'Usuario', 'Tia Leila', 'teste@teste', '12345678', 1, NULL, '2025-05-19 19:45:50', NULL, '0000-00-00 00:00:00');
 
 --
