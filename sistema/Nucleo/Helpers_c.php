@@ -197,11 +197,11 @@ class Helpers_c
 
         $slug = strip_tags(trim($slug));
 
-        $slug = str_replace(' ', '_', $slug);
+        $slug = str_replace(' ', '-', $slug);
 
         // $slug = str_replace(['_____', '____', '___', '__', '_'], '_' ,$slug);
 
-        $slug = preg_replace('/_+/', '_', $slug);
+        $slug = preg_replace('/-+/', '-', $slug);
 
 
         return strtolower($slug);

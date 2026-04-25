@@ -88,10 +88,10 @@ class SiteControlador extends Controlador
             if ($posts) {
                 foreach ($posts as $post) {
                     echo "<li class='list-group-item fw-bold'>
-                            <a href='" . Helpers_c::url('/blog/post/') . $post->id . "' class='link_post'>
-                                $post->titulo
-                            </a>
-                        </li>";
+                        <a href='" . Helpers_c::url('/blog/post/' . $post->slug . '/' . $post->id) . "' class='link_post'>
+                            $post->titulo
+                        </a>
+                    </li>";
                 }
             } else {
                 echo "<li class='nenhum-resultado'>Nenhum resultado encontrado</li>";

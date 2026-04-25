@@ -33,8 +33,9 @@ class UsuarioModelo extends Modelo
             $this->mensagem->alerta("Dados incorretos")->flash();
             return false;    
         }
+        if(!Helpers_c::verificarSenha($dados['senha'], $usuario->senha))
         // if($dados['senha'] != $usuario->senha)
-        if(!Helpers_c::verificarSenha($dados['senha'], $usuario->senha)){
+        {
             $this->mensagem->alerta("Os dados informados para o login estão incorretos!")->flash();
             return false;    
         }

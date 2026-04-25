@@ -12,7 +12,7 @@
             <div class="col-md-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <a href="{{url('/blog/categoria/'~categoria.id)}}" tooltip="tooltip" title="{{categoria.titulo}}">
+                        <a  class="tirar_decorate" href="{{url('/blog/post/'~post.slug~'/'~post.id)}}" tooltip="tooltip" title="{{post.titulo}}">
                             <h5 class="card-title">{{post.titulo}}</h5>
                             <p class="card-text">{{resumirTexto(post.texto, 150)}}</p>
                         </a>
