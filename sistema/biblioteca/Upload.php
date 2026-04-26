@@ -15,7 +15,7 @@ class Upload
     public $diretorio;
     public $arquivo;
     public $nome;
-    public $pasta;
+    public $subDiretorio;
 
     public function __construct(?string $diretorio = null)
     {
@@ -25,19 +25,29 @@ class Upload
         }
     }
 
-    public function arquivo(?string $pasta = null)
+    public function arquivo(array $arquivo, ?string $subDiretorio = null)
     {
-        $this->pasta = $pasta ?? 'arquivos';
+        $this->arquivo = $arquivo;
+        $this->subDiretorio = $subDiretorio ?? 'arquivos';
 
-        $this->criarPasta();
+        $this->criarsubDiretorio();
+        $this->moverArquivo();
     }
 
-    public function criarPasta(): void
+    public function criarsubDiretorio(): void
     {
-        $caminhoCompleto = $this->diretorio . DIRECTORY_SEPARATOR . $this->pasta;
+        $caminhoCompleto = $this->diretorio . DIRECTORY_SEPARATOR . $this->subDiretorio;
 
         if (!file_exists($caminhoCompleto) && !is_dir($caminhoCompleto)) {
             mkdir($caminhoCompleto, 0755);
+        }
+    }
+    public function moverArquivo(): void
+    {
+        if(move_uploaded_file($this->arquivo['tmp_name'], $this->diretorio. DIRECTORY_SEPARATOR.$this->subDiretorio.DIRECTORY_SEPARATOR.$this->arquivo['name'])){
+            echo 'movido com sucesso';
+        }else {
+            echo 'Erro ao enviar arquivo';
         }
     }
 
